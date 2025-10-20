@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+@font-face {
+    font-family: "Fraunces 144";
+    src: url("../../fonts/Fraunces_144pt-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monrope";
+    src: url("../../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations");
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+//Font Family
+$font-primary: "Fraunces 144", serif;
+$font-secondary: "Monrope", sans-serif;
+
+//Text presets
+$text-preset-1: (
+    font-size: (
+        font-size-1: (fs: 3rem, vw: $viewport-mobile),
+        font-size-2: (fs: 3.75rem, vw: $viewport-tablet),
+        font-size-3: (fs: 5rem, vw: $viewport-desktop)
+    ),
+    styles: (
+        font-family: $font-primary,
+        weight: 600,
+        line-height: 1,
+        letter-spacing: 0
+    )
+);
+
+$text-presrt-2: (
+    font-size: (
+        font-size-1: (fs: 2rem, vw: $viewport-mobile),
+        font-size-2: (fs: 3rem, vw: $viewport-tablet),
+        font-size-3: (fs: 3.5rem, vw: $viewport-desktop)
+    ),
+    styles: (
+        font-family: $font-primary,
+        weight: 600,
+        line-height: 1.2,
+        letter-spacing: 0
+    )
+);
+
+$text-preset-3: (
+    font-size: (
+        font-size-1: (fs: 1.5rem, vw: $viewport-mobile),
+        font-size-2: (fs: 1.75rem, vw: $viewport-tablet),
+        font-size-3: (fs: 2rem, vw: $viewport-desktop)
+    ),
+    styles: (
+        font-family: $font-primary,
+        weight: 600,
+        line-height: 1.2,
+        letter-spacing: 0
+    )
+);
+
+$text-preset-4: (
+    font-size: (
+        font-size-1: (fs: 1rem, vw: $viewport-mobile),
+        font-size-2: (fs: 1rem, vw: $viewport-tablet),
+        font-size-3: (fs: 1.125rem, vw: $viewport-desktop)
+    ),
+    styles: (
+        font-family: $font-secondary,
+        weight: 400,
+        line-height: 1.8,
+        letter-spacing: 0
+    )
+);
+
+$text-preset-5: (
+    font-size: (
+        font-size-1: (fs: 1.125rem),
+    ),
+    styles: (
+        font-family: $font-secondary,
+        weight: 700,
+        line-height: 1.5,
+        letter-spacing: 0
+    )
+);

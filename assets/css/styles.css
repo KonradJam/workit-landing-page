@@ -1,0 +1,48 @@
+/* RESET - Start */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*RESET - stop*/
+@font-face {
+  font-family: "Fraunces 144";
+  src: url("../../fonts/Fraunces_144pt-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monrope";
+  src: url("../../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+}
