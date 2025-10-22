@@ -35,14 +35,77 @@ h1, h2, h3, h4, h5, h6 {
 
 /*RESET - stop*/
 @font-face {
-  font-family: "Fraunces 144";
-  src: url("../../fonts/Fraunces_144pt-SemiBold.woff2") format("woff2");
+  font-family: "Fraunces144";
+  src: url("/assets/fonts/Fraunces_144pt-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Monrope";
-  src: url("../../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations");
+  src: url("/assets/fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations");
   font-weight: 400 700;
   font-style: normal;
+  font-display: swap;
+}
+.container {
+  padding: 0 1.25rem;
+}
+
+.hero {
+  background-color: rgb(36, 5, 62);
+}
+.hero__navbar {
+  padding-block-start: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  padding-block: 3.5rem 9rem;
+}
+.hero__underline, .hero__apply-button {
+  text-decoration: underline rgb(68, 255, 160) solid 0.1875rem;
+  text-underline-offset: 0.5rem;
+}
+.hero__apply-button {
+  font-family: Monrope, sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-size: 1.125rem;
+  color: rgb(255, 255, 255);
+  background: none;
+  border: none;
+}
+.hero__title {
+  font-family: Fraunces144, serif;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: clamp(3rem, 2.284351145rem + 3.0534351145vi, 3.75rem);
+}
+@media (min-width: 48rem) {
+  .hero__title {
+    font-size: clamp(3.75rem, 2.3214285714rem + 2.9761904762vi, 5rem);
+  }
+}
+.hero__title {
+  color: rgb(255, 255, 255);
+}
+.hero__learn-button {
+  font-family: Monrope, sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-size: 1.125rem;
+  color: rgb(36, 5, 62);
+  background-color: rgb(68, 255, 160);
+  border: none;
+  padding: 0.75rem 2rem;
+  margin: 0 auto;
 }

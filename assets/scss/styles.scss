@@ -2,4 +2,52 @@
 @use "assets/variables" as *;
 @use "assets/fonts" as *;
 @use "assets/fluid-typography" as *;
+@use "assets/mixins" as *;
 
+.container {
+    padding: 0 $spacing-250;
+}
+
+.hero {
+    background-color: $color-purple-900;
+
+    &__navbar {
+        padding-block-start: $spacing-400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        @include d-flex($spacing-500);
+        text-align: center;
+        padding-block: $spacing-700 $spacing-1800;
+    }
+
+    &__underline {
+        text-decoration: underline $color-green solid .1875rem;
+        text-underline-offset: .5rem;
+    }
+
+    &__apply-button {
+        @include fluid-typography($text-preset-5);
+        color: $color-white;
+        background: none;
+        border: none;
+        @extend .hero__underline;
+    }
+
+    &__title {
+        @include fluid-typography($text-preset-1);
+        color: $color-white;
+    }
+
+    &__learn-button {
+        @include fluid-typography($text-preset-5);
+        color: $color-purple-900;
+        background-color: $color-green;
+        border: none;
+        padding: $spacing-150 $spacing-400;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,5 @@
+@mixin d-flex($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}

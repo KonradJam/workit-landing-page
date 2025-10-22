@@ -6,44 +6,71 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Workit landing page</title>
 
-  <meta rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 
-  Apply for access
-
-  Data tailored to your needs.
-
-  Learn more
-  
-  1
-
-  Actionable insights
-  
-  Optimize your products, improve customer satisfaction and stay ahead of the competition 
-  with our product data analytics.
-
-  2
-
-  Data-driven decisions
-
-  Make data-driven decisions with our product data analytics. Our AI-generated reports help 
-  you unlock insights hidden in your product data.
-
-  3
-
-  Always affordable
-
-  Always affordable pricing that scales with your business. Get top-quality product data 
-  analytics services without hidden costs or unexpected fees.
-
-  Be the first to test
-
-  Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
-  beta tester for our app and kickstart your company. Apply for access below and I’ll be 
-  in touch to schedule a call.
-
-  Apply for access
+  <main class="page">
+    <header class="hero">
+      <div class="container">
+        <nav class="hero__navbar">
+          <img src="./assets/images/logo-light.svg" alt="" class="hero__logo" width="96" height="25">
+          <button class="hero__apply-button">Apply for access</button>
+        </nav>
+        <div class="hero__content">
+          <h1 class="hero__title">Data <span class="hero__underline">tailored</span> to your needs.</h1>
+          <button class="hero__learn-button">Learn more</button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="content">
+        <ul class="content__list">
+          <li class="content__item">
+            <div class="content__number">1</div>
+            <strong class="content__title">Actionable insights</strong>
+            <p class="content__description">
+              Optimize your products, improve customer satisfaction and stay ahead of the competition
+              with our product data analytics.
+            </p>
+          </li>
+          <li class="content__item">
+            <div class="content__number">2</div>
+            <strong class="content__title">Data-driven decisions</strong>
+            <p class="content__description">
+              Make data-driven decisions with our product data analytics. Our AI-generated reports help
+              you unlock insights hidden in your product data.
+            </p>
+          </li>
+          <li class="content__item">
+            <div class="content__number">3</div>
+            <strong class="content__title">Always affordable</strong>
+            <p class="content__description">
+              Always affordable pricing that scales with your business. Get top-quality product data
+              analytics services without hidden costs or unexpected fees.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="founder">
+        <h2 class="founder__title">Be the first to test</h2>
+        <p class="founder__description">
+          Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a
+          beta tester for our app and kickstart your company. Apply for access below and I’ll be
+          in touch to schedule a call.
+        </p>
+        <button class="founder__apply-button">Apply for access</button>
+      </section>
+      <footer class="footer">
+        <img src="" alt="" class="footer__logo">
+        <div class="footer__socials">
+          <img src="" alt="" class="footer__social-logo">
+          <img src="" alt="" class="footer__social-logo">
+          <img src="" alt="" class="footer__social-logo">
+        </div>
+      </footer>
+    </div>
+  </main>
 
 </body>
 </html>
