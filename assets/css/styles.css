@@ -128,4 +128,57 @@ h1, h2, h3, h4, h5, h6 {
 .hero__secondary-image {
   position: relative;
   z-index: 2;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.content {
+  background-color: rgb(253, 250, 255);
+  color: rgb(36, 5, 62);
+}
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  padding-block: 4rem;
+  text-align: center;
+}
+.content__number {
+  display: inline-block;
+  font-family: "Fraunces144", serif;
+  font-size: 1.25rem;
+  line-height: 0.4;
+  margin-block-end: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid rgb(88, 77, 98);
+  border-radius: 50%;
+}
+.content__title {
+  font-family: Fraunces144, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-size: clamp(1.5rem, 1.2614503817rem + 1.0178117048vi, 1.75rem);
+}
+@media (min-width: 48rem) {
+  .content__title {
+    font-size: clamp(1.75rem, 1.4642857143rem + 0.5952380952vi, 2rem);
+  }
+}
+.content__title {
+  display: block;
+  margin-block-end: 1rem;
+}
+.content__description {
+  font-family: Monrope, sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  font-size: clamp(1rem, 1rem + 0vi, 1rem);
+}
+@media (min-width: 48rem) {
+  .content__description {
+    font-size: clamp(1rem, 0.8571428571rem + 0.2976190476vi, 1.125rem);
+  }
 }

@@ -71,5 +71,40 @@
     &-image {
         position: relative;
         z-index: 2;
+        inline-size: 100%;
+        block-size: auto;
+    }
+}
+
+.content {
+    background-color: $color-purple-100;
+    color: $color-purple-900;
+
+    &__list {
+        @include d-flex($spacing-400);
+        list-style: none;
+        padding-block: $spacing-800;
+        text-align: center;
+    }
+
+    &__number {
+        display: inline-block;
+        font-family: $font-primary;
+        font-size: 1.25rem;
+        line-height: .4;
+        margin-block-end: $spacing-300;
+        padding: $spacing-250;
+        border: 1px solid $color-purple-500;
+        border-radius: 50%;
+    }
+
+    &__title {
+        @include fluid-typography($text-preset-3);
+        display: block;
+        margin-block-end: $spacing-200;
+    }
+
+    &__description {
+        @include fluid-typography($text-preset-4);
     }
 }
