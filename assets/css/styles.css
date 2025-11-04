@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   font-display: swap;
 }
 .container {
-  padding: 0 1.25rem;
+  padding: 0 clamp(1.25rem, -0.1812977099rem + 6.106870229vi, 2.75rem);
 }
 
 .hero {
@@ -129,7 +129,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   inline-size: 100%;
+  max-inline-size: 32.125rem;
   block-size: auto;
+  margin: 0 auto;
 }
 
 .content {
@@ -144,15 +146,25 @@ h1, h2, h3, h4, h5, h6 {
   padding-block: 4rem;
   text-align: center;
 }
+.content__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .content__number {
   display: inline-block;
   font-family: "Fraunces144", serif;
   font-size: 1.25rem;
   line-height: 0.4;
-  margin-block-end: 1.5rem;
   padding: 1.25rem;
   border: 1px solid rgb(88, 77, 98);
   border-radius: 50%;
+  margin: 0 auto;
+}
+.content__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 .content__title {
   font-family: Fraunces144, serif;
@@ -168,7 +180,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content__title {
   display: block;
-  margin-block-end: 1rem;
 }
 .content__description {
   font-family: Monrope, sans-serif;
@@ -180,5 +191,102 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 48rem) {
   .content__description {
     font-size: clamp(1rem, 0.8571428571rem + 0.2976190476vi, 1.125rem);
+  }
+}
+
+.content_secondary {
+  content: "";
+  position: relative;
+  display: block;
+  inline-size: 100%;
+  block-size: 6.5vw;
+  background-color: rgb(253, 250, 255);
+  z-index: 1;
+  clip-path: ellipse(50% 100% at 50% 0);
+}
+
+.founder {
+  padding-block-start: 7rem;
+}
+.founder__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.founder__image {
+  margin: 0 auto -3rem auto;
+}
+.founder__invitation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgb(36, 5, 62);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.founder__title {
+  font-family: Fraunces144, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-size: clamp(2rem, 1.0458015267rem + 4.0712468193vi, 3rem);
+}
+@media (min-width: 48rem) {
+  .founder__title {
+    font-size: clamp(3rem, 2.4285714286rem + 1.1904761905vi, 3.5rem);
+  }
+}
+.founder__description {
+  font-family: Monrope, sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  font-size: clamp(1rem, 1rem + 0vi, 1rem);
+}
+@media (min-width: 48rem) {
+  .founder__description {
+    font-size: clamp(1rem, 0.8571428571rem + 0.2976190476vi, 1.125rem);
+  }
+}
+.founder__apply-button {
+  font-family: Monrope, sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-size: 1.125rem;
+  color: rgb(36, 5, 62);
+  background-color: rgb(68, 255, 160);
+  border: none;
+  padding: 0.75rem 2rem;
+  margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 5rem 0;
+  max-inline-size: 7.25rem;
+  margin: 0 auto;
+}
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__social-logo {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .content__text {
+    text-align: left;
+    gap: 1.75rem;
+  }
+  .content__item {
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
   }
 }

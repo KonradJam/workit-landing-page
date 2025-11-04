@@ -5,7 +5,7 @@
 @use "assets/mixins" as *;
 
 .container {
-    padding: 0 $spacing-250;
+    padding: 0 clamp-size($spacing-250, $spacing-550, $viewport-mobile, $viewport-tablet);
 }
 
 .hero {
@@ -72,7 +72,9 @@
         position: relative;
         z-index: 2;
         inline-size: 100%;
+        max-inline-size: 32.125rem;
         block-size: auto;
+        margin: 0 auto;
     }
 }
 
@@ -87,24 +89,111 @@
         text-align: center;
     }
 
+    &__item {
+        @include d-flex($spacing-300);
+    }
+
     &__number {
         display: inline-block;
         font-family: $font-primary;
         font-size: 1.25rem;
         line-height: .4;
-        margin-block-end: $spacing-300;
         padding: $spacing-250;
         border: 1px solid $color-purple-500;
         border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    &__text {
+        @include d-flex($spacing-250);
     }
 
     &__title {
         @include fluid-typography($text-preset-3);
         display: block;
-        margin-block-end: $spacing-200;
     }
 
     &__description {
         @include fluid-typography($text-preset-4);
+    }
+}
+
+.content_secondary {
+    content: '';
+    position: relative;
+    display: block;
+    inline-size: 100%;
+    block-size: 6.5vw;
+    background-color: $color-purple-100;
+    z-index: 1;
+    clip-path: ellipse(50% 100% at 50% 0);
+}
+
+.founder {
+    padding-block-start: $spacing-1400;
+
+    &__container {
+        @include d-flex(0);
+    }
+
+    &__image {
+        margin: 0 auto -3rem auto;
+    }
+
+    &__invitation {
+        @include d-flex($spacing-400);
+        padding: $spacing-400;
+        background-color: $color-purple-900;
+        color: $color-white;
+        text-align: center;
+    }
+
+    &__title {
+        @include fluid-typography($text-preset-2);
+    }
+
+    &__description {
+        @include fluid-typography($text-preset-4);
+    }
+
+    &__apply-button {
+        @include fluid-typography($text-preset-5);
+        color: $color-purple-900;
+        background-color: $color-green;
+        border: none;
+        padding: $spacing-150 $spacing-400;
+        margin: 0 auto;
+    }
+}
+
+.footer {
+    @include d-flex($spacing-700);
+    padding: $spacing-1000 0;
+    max-inline-size: 7.25rem;
+    margin: 0 auto;
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-logo {
+        inline-size: 1.25rem;
+        block-size: 1.25rem;
+    }
+}
+
+@media (min-width: $viewport-tablet) {
+    .content {
+        &__text {
+            text-align: left;
+            gap: $spacing-350;
+        }
+
+        &__item {
+            flex-direction: row;
+            align-items: center;
+            gap: $spacing-700;
+        }
     }
 }
