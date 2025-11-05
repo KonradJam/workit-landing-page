@@ -82,6 +82,11 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(255, 255, 255);
   background: none;
   border: none;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.hero__apply-button:hover {
+  color: rgb(68, 255, 160);
 }
 .hero__title {
   font-family: Fraunces144, serif;
@@ -98,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__title {
   color: rgb(255, 255, 255);
 }
-.hero__learn-button {
+.hero__learn-button, .founder__apply-button {
   font-family: Monrope, sans-serif;
   font-weight: 700;
   line-height: 1.5;
@@ -106,9 +111,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125rem;
   color: rgb(36, 5, 62);
   background-color: rgb(68, 255, 160);
-  border: none;
+  border: 2px solid rgb(68, 255, 160);
   padding: 0.75rem 2rem;
   margin: 0 auto;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.hero__learn-button:hover, .founder__apply-button:hover {
+  color: rgb(68, 255, 160);
+  background-color: rgb(36, 5, 62);
 }
 
 .hero__secondary {
@@ -129,7 +140,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   inline-size: 100%;
-  max-inline-size: 32.125rem;
   block-size: auto;
   margin: 0 auto;
 }
@@ -249,19 +259,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(1rem, 0.8571428571rem + 0.2976190476vi, 1.125rem);
   }
 }
-.founder__apply-button {
-  font-family: Monrope, sans-serif;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 0;
-  font-size: 1.125rem;
-  color: rgb(36, 5, 62);
-  background-color: rgb(68, 255, 160);
-  border: none;
-  padding: 0.75rem 2rem;
-  margin: 0 auto;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -277,9 +274,46 @@ h1, h2, h3, h4, h5, h6 {
 .footer__social-logo {
   inline-size: 1.25rem;
   block-size: 1.25rem;
+  transition: all 0.5s;
+}
+.footer__social-logo:hover {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(77%) saturate(1497%) hue-rotate(252deg) brightness(91%) contrast(114%);
 }
 
 @media (min-width: 48rem) {
+  .container {
+    padding: 0 clamp(2.75rem, -5.5357142857rem + 17.2619047619vi, 10rem);
+  }
+  .hero {
+    position: relative;
+  }
+  .hero__navbar {
+    padding-block-start: clamp(2rem, 0.2857142857rem + 3.5714285714vi, 3.5rem);
+  }
+  .hero::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: clamp(3.625rem, -2.0892857143rem + 11.9047619048vi, 8.625rem);
+    left: clamp(-14rem, -22.7857142857rem + 18.3035714286vi, -6.3125rem);
+    background: url("/assets/images/bg-pattern-1.svg") no-repeat;
+    inline-size: 21.3125rem;
+    block-size: 19.8125rem;
+  }
+  .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: clamp(16.375rem, 10.6607142857rem + 11.9047619048vi, 21.375rem);
+    right: clamp(-5.875rem, -9.3035714286rem + 7.1428571429vi, -2.875rem);
+    background: url("/assets/images/bg-pattern-2.svg") no-repeat;
+    inline-size: 10.875rem;
+    block-size: 11.3125rem;
+    z-index: 2;
+  }
+  .hero__secondary-image {
+    max-inline-size: 67vw;
+  }
   .content__text {
     text-align: left;
     gap: 1.75rem;
@@ -288,5 +322,61 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     align-items: center;
     gap: 3.5rem;
+  }
+  .founder__container {
+    flex-direction: row;
+  }
+  .founder__invitation {
+    position: relative;
+    inline-size: 75%;
+    margin-block-start: 10.5rem;
+    margin-inline-start: auto;
+    padding: 3rem;
+    text-align: left;
+  }
+  .founder__invitation::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 14rem;
+    right: clamp(0.875rem, -5.8392857143rem + 13.9880952381vi, 6.75rem);
+    background: url("/assets/images/bg-pattern-3.svg") no-repeat;
+    inline-size: 13.8125rem;
+    block-size: 13.25rem;
+  }
+  .founder__image {
+    position: relative;
+    z-index: -1;
+    margin-inline: 0 -100%;
+    inline-size: clamp(17.5rem, 3.4285714286rem + 29.3154761905vi, 29.8125rem);
+    block-size: clamp(17.5rem, 3.4285714286rem + 29.3154761905vi, 29.8125rem);
+  }
+  .founder__apply-button {
+    margin-inline: 0 auto;
+  }
+  .footer {
+    padding: clamp(5rem, 2.7142857143rem + 4.7619047619vi, 7rem) 0;
+  }
+}
+@media (min-width: 90rem) {
+  .container {
+    max-inline-size: 70rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .hero__secondary-image {
+    max-inline-size: 53vw;
+  }
+  .content__list {
+    flex-direction: row;
+  }
+  .content__item {
+    flex-direction: column;
+  }
+  .content__text {
+    text-align: center;
+  }
+  .founder__invitation {
+    inline-size: 65%;
   }
 }
