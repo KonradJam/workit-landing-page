@@ -11,6 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.93.2"
+    "html-validate": "^10.3.0",
+    "pa11y": "^9.0.1",
+    "sass": "^1.93.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-scss": "^1.0.0-security",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-order": "^7.0.0"
   }
 }

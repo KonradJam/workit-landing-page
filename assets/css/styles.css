@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/*RESET - stop*/
+/* RESET - stop */
 @font-face {
   font-family: "Fraunces144";
   src: url("/assets/fonts/Fraunces_144pt-SemiBold.woff2") format("woff2");
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   font-display: swap;
 }
 @font-face {
-  font-family: "Monrope";
+  font-family: Monrope;
   src: url("/assets/fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations");
   font-weight: 400 700;
   font-style: normal;
@@ -122,11 +122,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(36, 5, 62);
 }
 
-.hero__secondary {
+.hero-secondary {
   position: relative;
   background-color: rgb(253, 250, 255);
 }
-.hero__secondary::after {
+.hero-secondary::after {
   content: "";
   position: absolute;
   top: 0;
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   clip-path: ellipse(100% 55% at 50% 0);
 }
-.hero__secondary-image {
+.hero-secondary-image {
   position: relative;
   z-index: 2;
   inline-size: 100%;
@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.content_secondary {
+.content-secondary {
   content: "";
   position: relative;
   display: block;
@@ -224,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0;
 }
 .founder__image {
-  margin: 0 auto -3rem auto;
+  margin: 0 auto -3rem;
 }
 .founder__invitation {
   display: flex;
@@ -313,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
     block-size: 11.3125rem;
     z-index: 2;
   }
-  .hero__secondary-image {
+  .hero-secondary-image {
     max-inline-size: 67vw;
   }
   .content__text {
@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0 auto;
   }
-  .hero__secondary-image {
+  .hero-secondary-image {
     max-inline-size: 53vw;
   }
   .content__list {

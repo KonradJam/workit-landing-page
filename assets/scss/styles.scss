@@ -13,14 +13,15 @@
     background-color: $color-purple-900;
 
     &__navbar {
-        padding-block-start: $spacing-400;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        padding-block-start: $spacing-400;
     }
 
     &__content {
         @include d-flex($spacing-500);
+
         text-align: center;
         padding-block: $spacing-700 $spacing-800;
     }
@@ -32,10 +33,13 @@
 
     &__apply-button {
         @include fluid-typography($text-preset-5);
+
         color: $color-white;
         background: none;
         border: none;
+
         @extend .hero__underline;
+
         cursor: pointer;
         transition: color $transition-btn-time;
     }
@@ -46,18 +50,20 @@
 
     &__title {
         @include fluid-typography($text-preset-1);
+
         color: $color-white;
     }
 
     &__learn-button {
         @include fluid-typography($text-preset-5);
+
+        margin: 0 auto;
+        padding: $spacing-150 $spacing-400;
         color: $color-purple-900;
         background-color: $color-green;
         border: 2px solid $color-green;
-        padding: $spacing-150 $spacing-400;
-        margin: 0 auto;
-        transition: all $transition-btn-time;
         cursor: pointer;
+        transition: all $transition-btn-time;
     }
 
     &__learn-button:hover {
@@ -66,19 +72,19 @@
     }
 }
 
-.hero__secondary {
+.hero-secondary {
     position: relative;
     background-color: $color-purple-100;
 
     &::after {
-        content: '';
         position: absolute;
         top: 0;
+        z-index: 1;
+        background-color: $color-purple-900;
+        content: '';
+        clip-path: ellipse(100% 55% at 50% 0);
         inline-size: 100%;
         block-size: 100%;
-        background-color: $color-purple-900;
-        z-index: 1;
-        clip-path: ellipse(100% 55% at 50% 0);
     }
     
     &-image {
@@ -91,14 +97,15 @@
 }
 
 .content {
-    background-color: $color-purple-100;
     color: $color-purple-900;
+    background-color: $color-purple-100;
 
     &__list {
         @include d-flex($spacing-400);
+
+        text-align: center;
         list-style: none;
         padding-block: $spacing-800;
-        text-align: center;
     }
 
     &__item {
@@ -107,13 +114,13 @@
 
     &__number {
         display: inline-block;
-        font-family: $font-primary;
-        font-size: 1.25rem;
-        line-height: .4;
+        margin: 0 auto;
         padding: $spacing-250;
+        font-size: 1.25rem;
+        font-family: $font-primary;
+        line-height: .4;
         border: 1px solid $color-purple-500;
         border-radius: 50%;
-        margin: 0 auto;
     }
 
     &__text {
@@ -122,6 +129,7 @@
 
     &__title {
         @include fluid-typography($text-preset-3);
+
         display: block;
     }
 
@@ -130,15 +138,15 @@
     }
 }
 
-.content_secondary {
-    content: '';
+.content-secondary {
     position: relative;
+    z-index: 1;
     display: block;
+    background-color: $color-purple-100;
+    content: '';
+    clip-path: ellipse(50% 100% at 50% 0);
     inline-size: 100%;
     block-size: 6.5vw;
-    background-color: $color-purple-100;
-    z-index: 1;
-    clip-path: ellipse(50% 100% at 50% 0);
 }
 
 .founder {
@@ -149,15 +157,16 @@
     }
 
     &__image {
-        margin: 0 auto -3rem auto;
+        margin: 0 auto -3rem;
     }
 
     &__invitation {
         @include d-flex($spacing-400);
+
         padding: $spacing-400;
-        background-color: $color-purple-900;
         color: $color-white;
         text-align: center;
+        background-color: $color-purple-900;
     }
 
     &__title {
@@ -175,9 +184,10 @@
 
 .footer {
     @include d-flex($spacing-700);
+
+    margin: 0 auto;
     padding: $spacing-1000 0;
     max-inline-size: 7.25rem;
-    margin: 0 auto;
 
     &__socials {
         display: flex;
@@ -186,8 +196,8 @@
 
     &__social-logo {
         display: block;
-        font-size: 1.25rem;
         color: $color-purple-500;
+        font-size: 1.25rem;
         cursor: pointer;
         transition: all $transition-btn-time;
     }
@@ -210,30 +220,30 @@
         }
 
         &::before {
-            content: '';
-            display: block;
             position: absolute;
             top: clamp-size(3.625rem, 8.625rem, $viewport-tablet, $viewport-desktop);
             left: clamp-size(-14rem, -6.3125rem, $viewport-tablet, $viewport-desktop);
+            display: block;
             background: url("/assets/images/bg-pattern-1.svg") no-repeat;
+            content: '';
             inline-size: 21.3125rem;
             block-size: 19.8125rem;
         }
 
         &::after {
-            content: '';
-            display: block;
             position: absolute;
             top: clamp-size(16.375rem, 21.375rem, $viewport-tablet, $viewport-desktop);
             right: clamp-size(-5.875rem, -2.875rem, $viewport-tablet, $viewport-desktop);
+            z-index: 2;
+            display: block;
             background: url("/assets/images/bg-pattern-2.svg") no-repeat;
+            content: '';
             inline-size: 10.875rem;
             block-size: 11.3125rem;
-            z-index: 2;
         }
     }
 
-    .hero__secondary {
+    .hero-secondary {
         &-image {
             max-inline-size: 67vw;
         }
@@ -241,14 +251,14 @@
 
     .content {
         &__text {
-            text-align: left;
             gap: $spacing-350;
+            text-align: left;
         }
 
         &__item {
             flex-direction: row;
-            align-items: center;
             gap: $spacing-700;
+            align-items: center;
         }
 
     }
@@ -268,12 +278,12 @@
         }
 
         &__invitation::after {
-            content: '';
-            display: block;
             position: absolute;
             top: 14rem;
             right: clamp-size(.875rem, 6.75rem, $viewport-tablet, $viewport-desktop);
+            display: block;
             background: url("/assets/images/bg-pattern-3.svg") no-repeat;
+            content: '';
             inline-size: 13.8125rem;
             block-size: 13.25rem;
         }
@@ -298,12 +308,12 @@
 
 @media (min-width: $viewport-desktop) {
     .container {
-        max-inline-size: 70rem;
-        padding: 0;
         margin: 0 auto;
+        padding: 0;
+        max-inline-size: 70rem;
     }
 
-    .hero__secondary {
+    .hero-secondary {
         &-image {
             max-inline-size: 53vw;
         }
