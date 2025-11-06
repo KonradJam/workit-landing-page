@@ -185,20 +185,15 @@
     }
 
     &__social-logo {
-        inline-size: 1.25rem;
-        block-size: 1.25rem;
+        display: block;
+        font-size: 1.25rem;
+        color: $color-purple-500;
+        cursor: pointer;
         transition: all $transition-btn-time;
     }
 
     &__social-logo:hover {
-        filter: brightness(0) 
-                saturate(100%) 
-                invert(10%) 
-                sepia(77%) 
-                saturate(1497%) 
-                hue-rotate(252deg) 
-                brightness(91%) 
-                contrast(114%);
+        color: $color-purple-900;
     }
 }
 
