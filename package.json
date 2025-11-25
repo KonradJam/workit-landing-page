@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "html-validate": "^10.3.0",
+    "lighthouse": "^13.0.1",
     "pa11y": "^9.0.1",
     "sass": "^1.93.2",
     "stylelint": "^16.25.0",
