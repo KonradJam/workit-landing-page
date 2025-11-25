@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
     top: clamp(3.625rem, -2.0892857143rem + 11.9047619048vi, 8.625rem);
     left: clamp(-14rem, -22.7857142857rem + 18.3035714286vi, -6.3125rem);
     display: block;
-    background: url("/assets/images/bg-pattern-1.svg") no-repeat;
+    background: url("./assets/images/bg-pattern-1.svg") no-repeat;
     content: "";
     inline-size: 21.3125rem;
     block-size: 19.8125rem;
@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
     right: clamp(-5.875rem, -9.3035714286rem + 7.1428571429vi, -2.875rem);
     z-index: 2;
     display: block;
-    background: url("/assets/images/bg-pattern-2.svg") no-repeat;
+    background: url("./assets/images/bg-pattern-2.svg") no-repeat;
     content: "";
     inline-size: 10.875rem;
     block-size: 11.3125rem;
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 14rem;
     right: clamp(0.875rem, -5.8392857143rem + 13.9880952381vi, 6.75rem);
     display: block;
-    background: url("/assets/images/bg-pattern-3.svg") no-repeat;
+    background: url("./assets/images/bg-pattern-3.svg") no-repeat;
     content: "";
     inline-size: 13.8125rem;
     block-size: 13.25rem;
